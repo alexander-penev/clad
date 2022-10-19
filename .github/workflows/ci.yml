@@ -360,6 +360,15 @@ jobs:
             compiler: clang-15
             clang-runtime: '14'
 
+            # Require add self hosted runner: Settings|Actions|Runners
+            # https://docs.github.com/en/actions/hosting-your-own-runners/adding-self-hosted-runners
+            # Note: Configure runner with default values of parameters.
+          - name: ubu18-clang12-runtime12-cuda
+            os: self-hosted
+            compiler: clang-12
+            clang-runtime: '12'
+            cuda: true
+
     steps:
     - uses: actions/checkout@v2
       with:
